@@ -10,13 +10,11 @@ export default function Home() {
   return (
     <>
       {session ? (
-        <div>
-        <h3>{session.user.name}</h3>
-        <button onClick={() => signOut()}>Logout</button>
-
+        <div className="text-center w-full">
+          <h3 className="text-2xl">{session.user.name}</h3>
         </div>
       ) : (
-      <Login signIn={signIn} />
+        <Login signIn={signIn} />
       )}
     </>
   )

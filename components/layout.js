@@ -4,7 +4,7 @@ const Layout = ({ children }) => {
     return (
         <>
             <NavBar />
-            <main className="container max-w-3xl mx-auto">
+            <main className="max-w-3xl mx-auto h-screen flex items-center">
                 {children}
             </main>
         </>
