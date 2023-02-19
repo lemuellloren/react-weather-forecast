@@ -1,14 +1,12 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
 import { useSession, signIn, signOut } from "next-auth/react"
-import Link from 'next/link'
+import { Inter } from '@next/font/google'
+import Login from "@/components/Login"
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const { data: session } = useSession()
+  console.log(session)
   return (
     <>
       {session ? (
@@ -18,11 +16,7 @@ export default function Home() {
 
         </div>
       ) : (
-        <div>
-            Welcome to the weather forecast web application. Please login with your
-          Github user to use the application and view the weather in your city
-          <button onClick={() => signIn()}>Login</button>
-        </div>
+      <Login signIn={signIn} />
       )}
     </>
   )
