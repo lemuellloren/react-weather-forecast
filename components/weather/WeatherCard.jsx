@@ -17,26 +17,26 @@ const WeatherCard = ({ weather, setShow, setSearch }) => {
                             )}
                         </tr>
                     </thead>
-                    <tbody className='bg-white dark:bg-slate-800'>
-                        <tr>
-                            <td className='border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400'>
+                    <tbody>
+                        <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                            <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 {moment().subtract(10, 'days').calendar()}
                             </td>
-                            <td className='border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400'>
+                            <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 <p>{((weather.main.temp * 9 / 5) + 32).toFixed(2)}</p>
                             </td>
-                            <td className='border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400'>
+                            <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 <p>({weather.weather[0].description})</p>
                             </td>
-                            <td className='border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400'>
+                            <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 <p>{weather.weather[0].main}</p>
 
                             </td>
-                            <td className='border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400'>
+                            <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 <p>{weather.main.pressure}</p>
 
                             </td>
-                            <td className='border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400'>
+                            <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 <p>{weather.main.humidity}</p>
                             </td>
                         </tr>
