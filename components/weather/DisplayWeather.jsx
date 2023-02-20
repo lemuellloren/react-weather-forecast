@@ -42,7 +42,7 @@ const DisplayWeather = ({ session }) => {
             {typeof weather.main !== "undefined" ? (
                 <div>
                     {/* Date  */}
-                    <p>{moment().format('MMMM/DD/YYYY')}</p>
+                    <p>{moment().subtract(10, 'days').calendar()}</p>
                     {/* Location  */}
                     <p>{weather.name}</p>
 
