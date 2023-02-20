@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { FiSearch } from "react-icons/fi"
+import moment from 'moment'
 
 const DisplayWeather = ({ session }) => {
     const [search, setSearch] = useState('')
@@ -40,6 +41,8 @@ const DisplayWeather = ({ session }) => {
             </div>
             {typeof weather.main !== "undefined" ? (
                 <div>
+                    {/* Date  */}
+                    <p>{moment().format('MMMM/DD/YYYY')}</p>
                     {/* Location  */}
                     <p>{weather.name}</p>
 
