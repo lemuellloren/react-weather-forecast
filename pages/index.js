@@ -1,6 +1,8 @@
 import { useSession, signIn, signOut } from "next-auth/react"
 import { Inter } from '@next/font/google'
+
 import Login from "@/components/Login"
+import DisplayWeather from "@/components/DisplayWeather"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -9,11 +11,7 @@ export default function Home() {
   console.log(session)
   if (session) {
     return (
-      <>
-        <div className="text-center w-full">
-          <h3 className="text-2xl">{session.user.name}</h3>
-        </div>
-      </>
+      <DisplayWeather session={session} />
     )
   }
 
