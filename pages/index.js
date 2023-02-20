@@ -2,7 +2,7 @@ import { useSession, signIn, signOut } from "next-auth/react"
 import { Inter } from '@next/font/google'
 
 import Login from "@/components/Login"
-import DisplayWeather from "@/components/DisplayWeather"
+import DisplayWeather from "@/components/weather/DisplayWeather"
 
 const inter = Inter({ subsets: ['latin'] })
 
