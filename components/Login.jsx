@@ -1,6 +1,6 @@
 const Login = ({ signIn }) => {
     return (
-        <div>
+        <div className="p-5">
             <p className="text-lg mb-10">
                 Welcome to the weather forecast web application. Please login with your
                 Github user to use the application and view the weather in your city

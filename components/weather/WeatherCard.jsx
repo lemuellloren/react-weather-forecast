@@ -3,37 +3,9 @@ import moment from 'moment'
 const WeatherCard = ({ weather, setShow, setSearch }) => {
 
     const tableHeaders = ['Date', 'Temp(F)', 'Description', 'Main', 'Pressure', 'Humidity']
-    const weatherData = [
-        {
-            title: 'Date',
-            data: moment().subtract(10, 'days').calendar(),
-        },
-        {
-            title: 'Temp(F)',
-            data: weather.main.temp,
-        },
-        {
-            title: 'Description',
-            data: weather.weather[0].description,
-        },
-        {
-            title: 'Main',
-            data: weather.weather[0].main,
-        },
-        {
-            title: 'Pressure',
-            data: weather.main.pressure,
-        },
-        {
-            title: 'Humidity',
-            data: weather.main.humidity,
-        },
-    ]
-
-    const { title, data } = weatherData
 
     return (
-        <div>
+        <div className='p-5'>
             <div className="relative bg-white overflow-auto">
                 <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                     <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -51,7 +23,7 @@ const WeatherCard = ({ weather, setShow, setSearch }) => {
                                 {moment().subtract(10, 'days').calendar()}
                             </td>
                             <td className='border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400'>
-                                <p>{weather.main.temp}°C</p>
+                                <p>{((weather.main.temp * 9 / 5) + 32).toFixed(2)}</p>
                             </td>
                             <td className='border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400'>
                                 <p>({weather.weather[0].description})</p>
