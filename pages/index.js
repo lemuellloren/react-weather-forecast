@@ -7,15 +7,17 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   const { data: session } = useSession()
   console.log(session)
-  return (
-    <>
-      {session ? (
+  if (session) {
+    return (
+      <>
         <div className="text-center w-full">
           <h3 className="text-2xl">{session.user.name}</h3>
         </div>
-      ) : (
-        <Login signIn={signIn} />
-      )}
-    </>
+      </>
+    )
+  }
+
+  return (
+    <Login signIn={signIn} />
   )
 }
