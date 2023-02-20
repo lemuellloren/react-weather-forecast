@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const { data: session } = useSession()
-  console.log(session)
+  console.log('data:',session)
   if (session) {
     return (
       <DisplayWeather session={session} />

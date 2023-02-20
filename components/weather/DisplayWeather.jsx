@@ -21,6 +21,9 @@ const DisplayWeather = ({ session }) => {
         <div className="text-center w-full">
             {!show && (
                 <>
+                    <div className="mb-5">
+                        <img className="mx-auto w-20 h-20 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src={session.user.image} alt={session.user.name} />
+                    </div>
                     <h3 className="text-2xl">{session.user.name}</h3>
                     <div className="my-10">
                         {/* search bar and search button  */}
